@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información del Gato</title>
+  <link rel="stylesheet" href="/styles/estilos.css">
+</head>
+<body>
+  <div id="info-gato"></div>
+
+
+    <div class="adopcion1">
+        <img src="/img/Vector.png" alt="llamada" class="llamadaRojo">
+        <button class="adoptar">ADOPTAR</button >
+  
+    </div>
+
+    <div id="custom-alert" class="custom-alert hidden">
+        <div class="custom-alert-content">
+          <p>No te olvides de la comida</p>
+          <button id="close-alert">A POR LA COMIDA</button>
+        </div>
+      </div>
+
+
+
+      <footer-component></footer-component>
+    <script src="footer-component.js" defer></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+      const infoGatoDiv = document.getElementById('info-gato');
+      const gatoSeleccionado = JSON.parse(localStorage.getItem('gatoSeleccionado'));
+
+      if (gatoSeleccionado) {
+        infoGatoDiv.innerHTML = `
+          <div class="pet-card">
+            <img src="${gatoSeleccionado.imgTienda}" alt="${gatoSeleccionado.tienda}" class="img-tienda">
+            <h5 class="h5titu">${gatoSeleccionado.nombreDueño}</h5>
+            <p>${gatoSeleccionado.tienda}</p>
+            <img src="${gatoSeleccionado.img}" alt="${gatoSeleccionado.raza}">
+            <div class="tags">
+              <span class="sexo">${gatoSeleccionado.sexo}</span>
+              <span class="raza">${gatoSeleccionado.raza}</span>
+              <span class="color">${gatoSeleccionado.color}</span>
+            </div>
+            <div>
+              <h2 class="nombreDegato">${gatoSeleccionado.nombreDeGato}</h2>
+              <p class="infoGato">${gatoSeleccionado.info}</p>
+            </div>
+          </div>
+        `;
+      } else {
+        infoGatoDiv.innerHTML = '<p>No se encontró información del gato.</p>';
+      }
+    });
+
+   
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const adoptarButton = document.querySelector('.adoptar');
+  const customAlert = document.getElementById('custom-alert');
+  const closeAlertButton = document.getElementById('close-alert');
+
+  adoptarButton.addEventListener('click', () => {
+    customAlert.classList.remove('hidden');
+  });
+
+  closeAlertButton.addEventListener('click', () => {
+    customAlert.classList.add('hidden');
+    window.location.href = 'http://127.0.0.1:5500/food.html';
+  });
+});
+  </script>
+</body>
+</html>
+

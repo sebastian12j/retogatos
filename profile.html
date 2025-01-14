@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
+</head>
+<body>
+    
+    <div class="profilePrincipal">
+        <div>
+            <h2 class="Following">407</h2>
+            <p>Following</p>
+        </div>
+
+        <div>
+            <img src="/img/contactos/Rectangle29.png" alt="profile" class="imagenperfil">
+        </div>
+
+        <div class="followers">
+            <h2>14,5k</h2>
+            <p>followers</p>
+        </div>
+
+    </div>
+
+    <div class="Infousuario">
+        <h1>SOFIA CLAIRO</h1>
+        <P>Red in the girl pet shop y owner</P>
+    </div>
+
+
+    <div id="profile-gato"></div>
+
+    <div class="comprafinal">
+    </div>
+
+
+    <footer-component></footer-component>
+    <script src="footer-component.js" defer></script>
+
+
+
+<script>
+     
+    document.addEventListener('DOMContentLoaded', () => {
+      const profileGatoDiv = document.querySelector('.comprafinal');
+      const gatoSeleccionado = JSON.parse(localStorage.getItem('gatoSeleccionado'));
+
+      if (gatoSeleccionado) {
+        profileGatoDiv.innerHTML = `
+          <div class="pet-card">
+            <img src="${gatoSeleccionado.imgTienda}" alt="${gatoSeleccionado.tienda}" class="img-tienda">
+            <h5 class="h5titu">${gatoSeleccionado.nombreDueño}</h5>
+            <p>${gatoSeleccionado.tienda}</p>
+            <img src="${gatoSeleccionado.img}" alt="${gatoSeleccionado.raza}">
+            <div class="tags">
+              <span class="sexo">${gatoSeleccionado.sexo}</span>
+              <span class="raza">${gatoSeleccionado.raza}</span>
+              <span class="color">${gatoSeleccionado.color}</span>
+            </div>
+            <div>
+              <h2 class="nombreDegato">${gatoSeleccionado.nombreDeGato}</h2>
+              <p class="infoGato">${gatoSeleccionado.info}</p>
+            </div>
+          </div>
+        `;
+      } else {
+        profileGatoDiv.innerHTML = '<p>No se encontró información del gato.</p>';
+      }
+    });
+
+
+
+
+  
+</script>
+</body>
+</html>

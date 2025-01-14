@@ -1,0 +1,15 @@
+// variables
+$font-color: #2c2424;
+$primary-color: #0a3e53;
+$secondary-color: rgb(158, 160, 217);
+$other-color: rgb(217, 217, 236);
+$font-all: fantasy;
+body{
+    background-color: $other-color ;
+    font: $font-all;
+    color: $font-color;
+}
+h1{
+    color: $primary-color;
+}
+//anidar
