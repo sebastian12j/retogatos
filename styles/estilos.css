@@ -1,0 +1,465 @@
+h2{
+  font-family: sans-serif;
+}
+
+h1{
+  font-family: sans-serif;
+}
+
+/* se afecta el carrusel */
+#carouselExample {
+  max-width: 500px; /* Ajusta el ancho del carrusel */
+  margin: 150px auto; /* Agrega un margen superior (20px) y centra horizontalmente */
+}
+
+#carouselExample .carousel-inner {
+  max-height: 500px; /* Ajusta esta altura según tus necesidades */
+}
+
+#carouselExample .carousel-item img {
+  height: 100%; /* Mantiene la imagen dentro de la altura máxima */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el área de manera proporcional */
+}
+
+  /* vamos afectar el titulo de la pagina inicial */
+  #home{
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+  
+
+  }
+
+
+  /* boto slider que lleva adopt */
+.hero-text h2 {
+    color: #000000; /* Color principal */
+}
+
+.hero-text p {
+    color: #000000;
+}
+
+.slider-container {
+    width: 300px;
+    height: 50px;
+    background-color: #221f1f; /* Fondo del contenedor */
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: white;
+    font-size: 16px;
+    position: relative;
+}
+
+.slider-handle {
+    width: 100px;
+    height: 100px;
+    background-color: #69f2f2; /* Color teal */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(7, 7, 7);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transition: right 0.3s;
+}
+
+.slider-container.active .slider-handle {
+    right: calc(100% - 50px);
+}
+
+
+
+.btn-custom {
+  background-color: #a10808; /* Color de fondo personalizado */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 5px 10px; /* Ajuste del padding */
+  border: 1px solid #ea2222; /* Borde del botón */
+}
+
+
+
+.btn-custom:hover {
+  background-color: #fd0c0c; /* Color al pasar el cursor */
+}
+button.btn-custom {
+  background-color: #7ee3f5 !important; /* Color de fondo personalizado */
+  border-radius: 50px !important; /* Bordes redondeados */
+  padding: 5px 10px !important; /* Ajuste del padding */
+  border: 1px solid #7ee3f5  !important; /* Borde del botón */
+}
+
+button.btn-custom:hover {
+  background-color: #7ee3f5  !important; /* Color al pasar el cursor */
+}
+
+
+/* css de la parte de razas de gatos */
+.cards{
+  display: flex;
+  justify-content: space-around;
+}
+.card {
+  border: 1px solid #ea2222; /* Borde del card */
+  border-radius: 100px !important; /* Bordes redondeados */
+  margin: 10px; /* Espaciado entre cards */
+
+}
+
+.card-img-top {
+  border-top-left-radius: 20px !important; /* Bordes redondeados de la imagen */
+  border-top-right-radius: 0px !important; /* Bordes redondeados de la imagen */
+
+ 
+}
+
+
+
+.card-title {
+  color: #a10808; /* Color del texto del título */
+  font-size: 1.25rem; /* Tamaño del texto del título */
+}
+
+.card-body{
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+  width: 50px !important;
+}
+
+
+
+
+
+/* styles.css */
+/* styles.css */
+.pet-card {
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-tienda {
+  width: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.h5titu {
+  color: #000000;
+  font-size: 1.25rem;
+}
+
+.prueba {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.prueba p {
+  margin: 0;
+}
+
+.favoritos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 22px;
+  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: #e8e8e8;
+  border-color: #ffe2e2;
+  border-style: solid;
+  border-width: 9px;
+  border-radius: 35px;
+  transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+  border-color 400ms ease-in-out,
+  background-color 400ms ease-in-out;
+  word-spacing: -2px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tags span {
+  background-color: #e5282e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.tags .raza {
+  background-color: #29b8b3;
+}
+
+.tags .color {
+  background-color: #dae423;
+}
+
+@keyframes movingBorders {
+  0% {
+    border-color: #fce4e4;
+  }
+
+  50% {
+    border-color: #ffd8d8;
+  }
+
+  90% {
+    border-color: #fce4e4;
+  }
+}
+
+button:hover {
+  background-color: #eee;
+  transform: scale(105%);
+  animation: movingBorders 3s infinite;
+}
+
+.filled,
+.empty {
+  fill: rgb(255, 110, 110);
+  transition: opacity 100ms ease-in-out;
+}
+
+.filled {
+  position: absolute;
+  opacity: 0;
+}
+
+@keyframes beatingHeart {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.15);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.15);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+}
+
+button:hover .empty {
+  opacity: 0;
+}
+
+button:hover .filled {
+  opacity: 1;
+  animation: beatingHeart 1.2s infinite;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-alert-content  {
+  background: rgb(7, 238, 255);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  border-radius: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.adoptar{
+  background: rgb(7, 238, 255);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  border-radius: 30px;
+}
+
+.adopcion1{
+  display: flex;
+  justify-content: center;
+}
+.llamadaRojo{
+  width: auto;
+}
+
+/* estilos.css */
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tag.red {
+  background-color: #ff6f61;
+}
+
+.tag.yellow {
+  background-color: #ffd700;
+}
+
+
+.profilePrincipal{
+  margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Following{
+ width: 150px;
+}
+
+.followers {
+  margin-left: 90px; /* Ajusta este valor según sea necesario */
+  /* Otros estilos que necesites */}
+
+
+  .imagenperfil{
+
+height: 200px;
+width: 200px;
+  }
+
+
+  .Infousuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-item {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  flex: 1;
+}
+
+.nav-item i {
+  font-size: 24px;
+}
+
+.nav-item span {
+  display: block;
+  font-size: 12px;
+}
+
+.nav-item.active {
+  background-color: teal;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+
+
+
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

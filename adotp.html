@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adopt</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">INICIO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/adotp.html">Adopt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/food.html">food</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  interatua
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="http://127.0.0.1:5500/favoritos.html">FAVORITOS</a></li>
+                  <li><a class="dropdown-item" href="#">messge</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">profile</a></li>
+                </ul>
+              </li>
+             
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+<div>
+  <form id="searchForm" class="d-flex" role="search">
+    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search your soulmate pet" aria-label="Search">
+    <button class="btn btn-custom" type="submit">
+        <img src="/img/lenteDebusqueda.png" alt="Buscar">
+    </button>
+</form>
+
+<!-- Modal -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <span class="close">×</span>
+        <div id="results"></div>
+    </div>
+</div>
+
+
+<div id="results"></div>
+
+    <div class="cards">
+      <div class="card" style="width: 18rem;" data-raza="bengal">
+        <div class="card-body text-center">
+          <img src="/img/razaDegatos/Rectangle 11.png" class="card-img-top" alt="Bengal">
+          <h5 class="card-title">Bengal</h5>
+        </div>
+      </div>
+      
+      <div class="card" style="width: 18rem;" data-raza="persian">
+        <div class="card-body text-center">
+          <img src="/img/razaDegatos/Rectangle 13.png" class="card-img-top" alt="Persian">
+          <h5 class="card-title">Persian</h5>
+        </div>
+      </div>
+      
+      <div class="card" style="width: 18rem;" data-raza="siam">
+        <div class="card-body text-center">
+          <img src="/img/razaDegatos/Rectangle 15.png" class="card-img-top" alt="Siam">
+          <h5 class="card-title">Siam</h5>
+        </div>
+      </div>
+  
+      
+  
+  </div>
+    
+  <div id="gatos-container"></div>
+
+    
+    
+    
+</div>
+
+
+    <script src="/scripsts/scripsts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <footer-component></footer-component>
+    <script src="footer-component.js" defer></script>
+</body>
+</html>
